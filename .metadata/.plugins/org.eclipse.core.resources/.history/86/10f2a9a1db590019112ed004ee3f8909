@@ -1,0 +1,37 @@
+package blatt03;
+import java.awt.*;
+import javax.swing.JFrame;
+
+/**
+ * Klasse, um ein Raster zu malen
+ */
+public class LoesungXYRaster extends JFrame {
+
+    /** Konstruktor. Nichts zu ändern hier */
+    public LoesungXYRaster(){
+        super();
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        this.setSize(604,417);
+        this.setTitle("L�sung in der Klasse " + this.getClass().getName()); 
+        this.setVisible(true);
+    }
+
+    /** Main-Methode. Nichts zu ändern hier. */
+    public static void main(String[] args){
+    	new LoesungXYRaster();
+    }
+   
+	/** 
+	 * Hier bitte die Lösung, um das Grid zu zeichnen
+	 * 
+	 */
+   public void paint(Graphics g){
+   	g.clearRect(0, 0, this.getWidth(), this.getHeight());
+   	this.meinRaster(g);
+    } 
+   
+   public void meinRaster(Graphics g) {
+	   
+   }
+   
+}

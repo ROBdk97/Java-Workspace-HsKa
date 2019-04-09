@@ -1,0 +1,15 @@
+package Kaesten;
+
+public class Sporttabelle {
+
+	public static void main(String[] args) {
+		final int STARTJAHR = 2018;
+		final int ANZAHLJAHRE = 10;
+		for (int jahr = STARTJAHR; jahr <= (STARTJAHR + ANZAHLJAHRE); jahr++) {
+			if (jahr % 2 == 0) {
+				System.out.println(jahr + " gibt es eine Sommerolympiade oder Fußballweltmeisterschaft");
+			}
+		}
+	}
+
+}
