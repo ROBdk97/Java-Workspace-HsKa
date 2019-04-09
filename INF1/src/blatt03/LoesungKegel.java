@@ -42,15 +42,15 @@ public class LoesungKegel extends JFrame {
 		g.drawLine((int) x25, (int) y75, (int) x75, (int) y75);
 		// Variabeln
 		final int LINES = 40;
-		double horizontalStep = (x75 - x25) / LINES;
+		final double STEP = (x75 - x25) / LINES;
 		// Kegel
 		for (int i = 0; i <= LINES; i++) {
-			if (i == 0 | i == 40) {
+			if (i == 0 | i == LINES) {
 				g.setColor(Color.black);
 			} else {
-				g.setColor(Color.lightGray);
+				if(g.getColor()!=Color.LIGHT_GRAY)g.setColor(Color.lightGray);
 			}
-			g.drawLine((int) (x25 + (horizontalStep * i)), (int) y25, (int) (x75 - (horizontalStep * i)), (int) y75);
+			g.drawLine((int) (x25 + STEP*i), (int) y25, (int) (x75 - STEP*i), (int) y75);
 		}
 	}
 }
