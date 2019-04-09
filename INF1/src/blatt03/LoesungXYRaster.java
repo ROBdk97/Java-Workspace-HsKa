@@ -3,7 +3,7 @@ package blatt03;
 import java.awt.*;
 import javax.swing.JFrame;
 
-import nuetzlich.Center;
+import nuetzlich.Neutzlich;
 
 /**
  * Klasse, um ein Raster zu malen
@@ -36,7 +36,7 @@ public class LoesungXYRaster extends JFrame {
 	public void meinRaster(Graphics g) {
 
 		// Benutzung ausgelagerter Methode um die Mitte zu finden
-		int[] center = Center.getCenter(this);
+		int[] center = Neutzlich.getCenter(this);
 		int x25 = center[0];
 		int x75 = center[1];
 		int y25 = center[2];

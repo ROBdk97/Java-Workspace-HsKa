@@ -3,7 +3,7 @@ package blatt03;
 import java.awt.*;
 import javax.swing.JFrame;
 
-import nuetzlich.Center;
+import nuetzlich.Neutzlich;
 
 /**
  * Klasse für erste eigene einfache Zeichnung
@@ -54,7 +54,7 @@ public class LoesungDiagonalen extends JFrame {
 	public void meineDiagonalen(Graphics g) {
 
 		// Benutzung ausgelagerter Methode um die Mitte zu finden
-		int[] center = Center.getCenter(this);
+		int[] center = Neutzlich.getCenter(this);
 		int x25 = center[0];
 		int x75 = center[1];
 		int y25 = center[2];

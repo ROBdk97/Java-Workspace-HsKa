@@ -3,7 +3,7 @@ package blatt03;
 import java.awt.*;
 import javax.swing.JFrame;
 
-import nuetzlich.Center;
+import nuetzlich.Neutzlich;
 
 /**
  * Klasse, um ein Raster zu malen
@@ -39,7 +39,7 @@ public class LoesungKegel extends JFrame {
 		 * double y25 = this.getHeight() / 4; double y75 = this.getHeight() * 3 / 4;
 		 */
 		// Benutzung ausgelagerter Methode um die Mitte zu finden
-		int[] center = Center.getCenter(this);
+		int[] center = Neutzlich.getCenter(this);
 		double x25 = center[0];
 		double x75 = center[1];
 		double y25 = center[2];

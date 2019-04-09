@@ -2,7 +2,7 @@ package blatt03;
 import java.awt.*;
 import javax.swing.JFrame;
 
-import nuetzlich.Center;
+import nuetzlich.Neutzlich;
 
 /**
  * Klasse für eine sehr einfache Zeichnung
@@ -28,7 +28,7 @@ public class LoesungsBeispiel extends JFrame {
 	 * 
 	 */
    public void paint(Graphics g){
-	   	int[] center = Center.getCenter(this);
+	   	int[] center = Neutzlich.getCenter(this);
 		int x25 = center[0];
 		int x75 = center[1];
 		int y25 = center[2];
