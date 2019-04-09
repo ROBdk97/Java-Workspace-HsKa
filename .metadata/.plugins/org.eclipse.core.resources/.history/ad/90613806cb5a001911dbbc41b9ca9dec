@@ -40,7 +40,7 @@ public class LoesungKegel extends JFrame {
 		g.setColor(Color.black);
 		g.drawLine((int) x25, (int) y25, (int) x75, (int) y25);
 		g.drawLine((int) x25, (int) y75, (int) x75, (int) y75);
-		// Variabeln
+		// Kegel
 		final int LINES = 40;
 		double horizontalStep = (x75 - x25) / LINES;
 		// Kegel
