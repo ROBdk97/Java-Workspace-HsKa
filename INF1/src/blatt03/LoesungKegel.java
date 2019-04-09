@@ -13,7 +13,7 @@ public class LoesungKegel extends JFrame {
 		super();
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		this.setSize(610, 420);
-		this.setTitle("LÃ¶sung in der Klasse " + this.getClass().getName());
+		this.setTitle("Lösung in der Klasse " + this.getClass().getName());
 		this.setVisible(true);
 	}
 
@@ -48,9 +48,11 @@ public class LoesungKegel extends JFrame {
 			if (i == 0 | i == LINES) {
 				g.setColor(Color.black);
 			} else {
-				if(g.getColor()!=Color.LIGHT_GRAY)g.setColor(Color.lightGray);
+				if (g.getColor() != Color.LIGHT_GRAY) {
+					g.setColor(Color.lightGray);
+				}
 			}
-			g.drawLine((int) (x25 + STEP*i), (int) y25, (int) (x75 - STEP*i), (int) y75);
+			g.drawLine((int) (x25 + STEP * i), (int) y25, (int) (x75 - STEP * i), (int) y75);
 		}
 	}
 }
