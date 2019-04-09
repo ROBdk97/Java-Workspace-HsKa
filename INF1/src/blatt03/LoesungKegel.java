@@ -3,6 +3,8 @@ package blatt03;
 import java.awt.*;
 import javax.swing.JFrame;
 
+import nuetzlich.Center;
+
 /**
  * Klasse, um ein Raster zu malen
  */
@@ -32,10 +34,17 @@ public class LoesungKegel extends JFrame {
 	}
 
 	public void meinKegel(Graphics g) {
-		double x25 = this.getWidth() / 4;
-		double x75 = this.getWidth() * 3 / 4;
-		double y25 = this.getHeight() / 4;
-		double y75 = this.getHeight() * 3 / 4;
+		/*
+		 * double x25 = this.getWidth() / 4; double x75 = this.getWidth() * 3 / 4;
+		 * double y25 = this.getHeight() / 4; double y75 = this.getHeight() * 3 / 4;
+		 */
+		// Benutzung ausgelagerter Methode um die Mitte zu finden
+		int[] center = Center.getCenter(this);
+		double x25 = center[0];
+		double x75 = center[1];
+		double y25 = center[2];
+		double y75 = center[3];
+		
 		// Linie Oben/Unten
 		g.setColor(Color.black);
 		g.drawLine((int) x25, (int) y25, (int) x75, (int) y25);

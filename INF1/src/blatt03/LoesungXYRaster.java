@@ -3,6 +3,8 @@ package blatt03;
 import java.awt.*;
 import javax.swing.JFrame;
 
+import nuetzlich.Center;
+
 /**
  * Klasse, um ein Raster zu malen
  */
@@ -32,10 +34,13 @@ public class LoesungXYRaster extends JFrame {
 	}
 
 	public void meinRaster(Graphics g) {
-		int x25 = this.getWidth() / 4; // x-Koordinate bei 25% der Fensterbreite (von links)
-		int x75 = this.getWidth() * 3 / 4; // x-Koordinate bei 75% der Fensterbreite (von links)
-		int y25 = this.getHeight() / 4; // y-Koordinate bei 25% der Fensterbreite (von oben)
-		int y75 = this.getHeight() * 3 / 4; // y-Koordinate bei 75% der Fensterbreite (von oben)
+
+		// Benutzung ausgelagerter Methode um die Mitte zu finden
+		int[] center = Center.getCenter(this);
+		int x25 = center[0];
+		int x75 = center[1];
+		int y25 = center[2];
+		int y75 = center[3];
 
 		final int LINES = 11;
 		// Komplettes Rechteck zeichnen
@@ -44,7 +49,7 @@ public class LoesungXYRaster extends JFrame {
 		g.drawLine(x25, y75, x75, y75);
 		g.drawLine(x75, y25, x75, y75);
 
-		// Raster Zeichen		
+		// Raster Zeichen
 		int horizontalStep = (y75 - y25) / (LINES + 1);
 		int verticalStep = (x75 - x25) / (LINES + 1);
 		for (int i = 1; i <= LINES; i++) {
@@ -55,7 +60,7 @@ public class LoesungXYRaster extends JFrame {
 			}
 			// Horizontal
 			g.drawLine(x25, y25 + (horizontalStep * i), x75, y25 + (horizontalStep * i));
-			//Vertical
+			// Vertical
 			g.drawLine(x25 + (verticalStep * i), y25, x25 + (verticalStep * i), y75);
 		}
 	}
