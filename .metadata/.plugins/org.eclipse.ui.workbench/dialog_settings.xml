@@ -22,23 +22,14 @@
 		<item key="WizardFileSystemResourceImportPage1.STORE_OVERWRITE_EXISTING_RESOURCES_ID" value="false"/>
 		<item key="WizardFileSystemResourceImportPage1.STORE_CREATE_CONTAINER_STRUCTURE_ID" value="false"/>
 		<list key="WizardFileSystemResourceImportPage1.STORE_SOURCE_NAMES_ID">
-			<item value="E:\Projekte\JavaProjects"/>
 			<item value="C:\Users\ROisA\Downloads"/>
 		</list>
 	</section>
-	<section name="WorkbenchPreferenceDialogSettings">
-		<item key="DIALOG_X_ORIGIN" value="651"/>
-		<item key="DIALOG_Y_ORIGIN" value="158"/>
-	</section>
-	<section name="InstallationDialogSettings">
-		<item key="DIALOG_X_ORIGIN" value="-34"/>
-		<item key="DIALOG_Y_ORIGIN" value="-150"/>
-		<item key="DIALOG_WIDTH" value="702"/>
-		<item key="DIALOG_HEIGHT" value="740"/>
-		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
-	</section>
 	<section name="NewWizardAction">
-	</section>
-	<section name="EditorSelectionDialog">
+		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.wb.swing.JFrame"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.eclipse.wb"/>
+			<item value="org.eclipse.wb/org.eclipse.wb.swing"/>
+		</list>
 	</section>
 </section>
