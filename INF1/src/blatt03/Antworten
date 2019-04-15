@@ -1,5 +1,5 @@
 Aufgabe 3.1
-	Class, 
+	initialisierung mit new und Konstruktoren
 
 Aufgabe 3.2
 	Da der Code in eine einheitlichen Maschienencode kompiliert wird
@@ -7,10 +7,11 @@ Aufgabe 3.2
 	 ausgeführt wird.
 	 
  Aufgabe 3.3
- 	Das Design/Die GUI wird seperat in einer XML datei gestalltet
+ 	Android unterstützt Java an sich nicht (zumindest .jar sind nicht ausführbar) aber jedoch kann
+ 	 java code in anderer form ausgeführt werden
  	
  Aufgabe 3.9
- 	Sie löscht den Vorherigen Inhalt und führt eine andere Methode aius die etwas Darstellen soll.
+ 	Sie löscht den Vorherigen Inhalt und führt eine andere Methode aus die etwas Darstellen soll.
  	Der Parameter g ist eine Referenz auf die Grafische Oberfläche
  	In die Methode meineDiagonalen unter den jeweiligen Kommentaren
  	Man muss hier noch was tun
