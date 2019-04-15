@@ -38,42 +38,62 @@ public class LoesungStern extends JFrame {
 		int n = 100;
 		double phi = 0;
 		int r = 150;
-		int tempR=0;
+		int tempR = 0;
 
 		for (double i = 0; i < n; i++) {
 			phi = i * (2 * Math.PI) / n;
 			double y = Math.sin(phi);
 			double x = Math.cos(phi);
-			//System.out.println(phi+", "+y + ", " + x);
-			if(i%2==0) {
-				tempR=r;
+			// System.out.println(phi+", "+y + ", " + x);
+			if (i % 2 == 0) {
+				tempR = r;
 				g.setColor(Color.BLUE);
-			}else {
+			} else {
 				g.setColor(Color.magenta);
-				tempR=r/2;
+				tempR = r / 2;
 			}
-			g.drawLine((int) mitteX, (int) mitteY, (int) (mitteX+tempR * x), (int) (mitteY+tempR * y));
+			g.drawLine((int) mitteX, (int) mitteY, (int) (mitteX + tempR * x), (int) (mitteY + tempR * y));
 
 		}
 
 	}
-	
-	public void zeichneEinenStern(Graphics g, int midX, int midY, int r) {
+
+	public static void zeichneEinenStern(Graphics g, int midX, int midY, int r) {
 		double phi = 0;
 		int n = 100;
-		int tempR=0;
+		int tempR = 0;
 		for (double i = 0; i < n; i++) {
 			phi = i * (2 * Math.PI) / n;
 			double y = Math.sin(phi);
 			double x = Math.cos(phi);
-			if(i%2==0) {
-				tempR=r;
+			if (i % 2 == 0) {
+				tempR = r;
 				g.setColor(Color.BLUE);
-			}else {
+			} else {
 				g.setColor(Color.magenta);
-				tempR=r/2;
+				tempR = r / 2;
 			}
-			g.drawLine((int) midX, (int) midY, (int) (midX+tempR * x), (int) (midY+tempR * y));
+			g.drawLine((int) midX, (int) midY, (int) (midX + tempR * x), (int) (midY + tempR * y));
+
+		}
+	}
+
+	public static void zeichneEinenStern(Graphics g, int midX, int midY, int r, Color colorKurz, Color colorLang) {
+		double phi = 0;
+		int n = 100;
+		int tempR = 0;
+		for (double i = 0; i < n; i++) {
+			phi = i * (2 * Math.PI) / n;
+			double y = Math.sin(phi);
+			double x = Math.cos(phi);
+			if (i % 2 == 0) {
+				tempR = r;
+				g.setColor(colorLang);
+			} else {
+				g.setColor(colorKurz);
+				tempR = r / 2;
+			}
+			g.drawLine((int) midX, (int) midY, (int) (midX + tempR * x), (int) (midY + tempR * y));
 
 		}
 	}
