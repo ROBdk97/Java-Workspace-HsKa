@@ -1,8 +1,8 @@
 Aufgabe 3.1
-	initialisierung mit new und Konstruktoren
+	initialisierung mit new und Konstruktoren, class, sichtbarkeit
 
 Aufgabe 3.2
-	Da der Code in eine einheitlichen Maschienencode kompiliert wird
+	Da der Code in eine einheitlichen Bytecode kompiliert wird
 	 der dann von dem Platformabhängigen Java Virtual Runtime Envirement 
 	 ausgeführt wird.
 	 
@@ -12,6 +12,6 @@ Aufgabe 3.2
  	
  Aufgabe 3.9
  	Sie löscht den Vorherigen Inhalt und führt eine andere Methode aus die etwas Darstellen soll.
- 	Der Parameter g ist eine Referenz auf die Grafische Oberfläche
+ 	Der Parameter g ist eine Referenz auf die Grafische Oberfläche (JFrame)
  	In die Methode meineDiagonalen unter den jeweiligen Kommentaren
  	Man muss hier noch was tun
