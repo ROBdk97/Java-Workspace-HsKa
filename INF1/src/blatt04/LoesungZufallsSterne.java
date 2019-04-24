@@ -45,7 +45,7 @@ public class LoesungZufallsSterne extends JFrame {
 	}
 
 	private void meineZufallsSterne(Graphics g) {
-		final int STERNE = (int) (getWidth()/10);//(100 * Math.random());
+		final int STERNE = (int) (getWidth()/10);
 		for (int i = 0; i <= STERNE; i++) {
 			LoesungStern.zeichneEinenStern(g, (int) (2*Math.random() * this.getHeight()),
 					(int) (2*Math.random() * this.getWidth()), (int) (200 * Math.random()));
