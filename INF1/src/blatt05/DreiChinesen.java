@@ -1,5 +1,5 @@
 package blatt05;
-
+import nuetzlich.*;
 public class DreiChinesen {
 	static final String text = 
 			  "Drei Chinesen mit dem Kontrabass\n" 
@@ -9,7 +9,7 @@ public class DreiChinesen {
 			;
 
 	/**
-	 * Einen Text zentriert ausgeben. Es genÃ¼gt eine LÃ¶sung fÃ¼r nichtproportionale
+	 * Einen Text zentriert ausgeben. Es genägt eine Lösung für nichtproportionale
 	 * Schriftarten.
 	 * 
 	 * @param text
@@ -24,11 +24,9 @@ public class DreiChinesen {
 			}
 		}
 		for (String string : textlines) {
-			if((maxLength-string.length())!=0) {
-				String format=("%"+(maxLength-string.length())+"s\n");
-			}
-			System.out.printf(format, string);
+			System.out.println(Neutzlich.getSpaces((maxLength-string.length())/2)+string);
 		}
+		System.out.println();
 	}
 
 	/**
@@ -37,17 +35,28 @@ public class DreiChinesen {
 	 * @param text
 	 *            Text mit Vokalen
 	 * @param replacement
-	 *            Ersatz fÃ¼r Vokale
-	 * @return Text mit geÃ¤nderten Vokalen
+	 *            Ersatz für Vokale
+	 * @return Text mit geänderten Vokalen
 	 */
 	static String changeVowels(String text, String replacement) {
-		return text; // TODO
+		String[] vowels = {"a","e","i","o","u","ä","ö","ü"};
+		for (String string : vowels) {
+			text = text.replaceAll(string, replacement);
+		}		
+		
+		return text;
 	}
 
 	public static void main(String[] args) {
 		DreiChinesen.printCentered(text);
-		DreiChinesen.printCentered(DreiChinesen.changeVowels(text, "i"));
-		DreiChinesen.printCentered(DreiChinesen.changeVowels(text, "ä"));
+		String[] vowels = {"a","e","i","o","u","ä","ö","ü"};
+		for (String variant : vowels) {
+			DreiChinesen.printCentered(DreiChinesen.changeVowels(text, variant));
+		}
+		printCentered(changeVowels("", ""));
+		printCentered(changeVowels("ä", "ä"));
+		
+		
+		printCentered(changeVowels(Neutzlich.loremIpsum(), "ä"));
 	}
-
 }
