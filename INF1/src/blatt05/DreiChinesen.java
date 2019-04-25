@@ -24,7 +24,8 @@ public class DreiChinesen {
 			}
 		}
 		for (String string : textlines) {
-			System.out.println(Neutzlich.getSpaces((maxLength-string.length())/2)+string);
+			System.out.println(getSpaces((maxLength-string.length())/2)+string);
+			//System.out.printf("%"+((maxLength-string.length())/2)+"s",string);
 		}
 		System.out.println();
 	}
@@ -58,5 +59,17 @@ public class DreiChinesen {
 		
 		
 		printCentered(changeVowels(Neutzlich.loremIpsum(), "ä"));
+	}
+	
+	/**
+	 * @param ammount
+	 * @return ammount of blanks as String
+	 */
+	public static String getSpaces(int ammount) {
+		String spaces="";
+		for(int i=0;i<=ammount;i++) {
+			spaces=spaces+" ";
+		}
+		return spaces;
 	}
 }

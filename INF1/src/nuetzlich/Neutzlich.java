@@ -43,17 +43,6 @@ public class Neutzlich {
 		}
 		return a;
 	}
-	/**
-	 * @param ammount
-	 * @return ammount of blanks as String
-	 */
-	public static String getSpaces(int ammount) {
-		String spaces="";
-		for(int i=0;i<=ammount;i++) {
-			spaces=spaces+" ";
-		}
-		return spaces;
-	}
 	
 	public static String loremIpsum() {
 		String text = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.\r\n" + 
