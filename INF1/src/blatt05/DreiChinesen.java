@@ -16,18 +16,18 @@ public class DreiChinesen {
 	 *            Text mit mehreren Zeilen (durch '\n' abgetrennt)
 	 */
 	static void printCentered(String text) {
-		String[] textlines= text.split("\n");
+		String[] textlines= text.split("\n"); //Auftrennen des Strings be \n in mehrere Strings
 		int maxLength=0;
-		for(int i=0;i<textlines.length;i++) {
+		for(int i=0;i<textlines.length;i++) {	//Forschleife zum erfassen ders längsten string und speichern dieser länge
 			if(textlines[i].length()>maxLength) {
 				maxLength=textlines[i].length();
 			}
 		}
-		for (String string : textlines) {
-			System.out.println(getSpaces((maxLength-string.length())/2)+string);
+		for (String string : textlines) { //Schleife die alle Strings durchgeht und Ausgibt
+			System.out.println(getSpaces((maxLength-string.length())/2)+string);	//erzeugen von Spaces + Ausgeben
 			//System.out.printf("%"+((maxLength-string.length())/2)+"s",string);
 		}
-		System.out.println();
+		System.out.println();	//Absatz
 	}
 
 	/**
@@ -40,7 +40,7 @@ public class DreiChinesen {
 	 * @return Text mit geänderten Vokalen
 	 */
 	static String changeVowels(String text, String replacement) {
-		String[] vowels = {"a","e","i","o","u","ä","ö","ü"};
+		String[] vowels = {"a","e","i","o","u","ä","ö","ü"};	//Alle Vokale
 		for (String string : vowels) {
 			text = text.replaceAll(string, replacement);
 		}		
