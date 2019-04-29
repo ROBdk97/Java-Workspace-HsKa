@@ -41,31 +41,31 @@ public class DreiChinesen {
 	 */
 	static String changeVowels(String text, String replacement) {
 		String[] vowels = {"a","e","i","o","u","ä","ö","ü"};	//Alle Vokale
-		for (String string : vowels) {
-			text = text.replaceAll(string, replacement);
+		for (String string : vowels) {							//For schleife die alle Vokale durchgeht für die Strings
+			text = text.replaceAll(string, replacement);		//Das jeweilige Vokal ersetzen
 		}		
 		
-		return text;
+		return text;	//Den Text Zurückgeben
 	}
 
 	public static void main(String[] args) {
-		DreiChinesen.printCentered(text);
+		DreiChinesen.printCentered(text);	//Test von prtintCenter
 		String[] vowels = {"a","e","i","o","u","ä","ö","ü"};
-		for (String variant : vowels) {
+		for (String variant : vowels) {		//Forschleife die alle varianten des Liedes Ausgiebt
 			DreiChinesen.printCentered(DreiChinesen.changeVowels(text, variant));
 		}
-		printCentered(changeVowels("", ""));
-		printCentered(changeVowels("ä", "ä"));
+		printCentered(changeVowels("", ""));	//Test: Kein Text
+		printCentered(changeVowels("ä", "ä"));	//Test: Der Selbe Buchstabe als Text
 		
 		
-		printCentered(changeVowels(Neutzlich.loremIpsum(), "ä"));
+		printCentered(changeVowels(Neutzlich.loremIpsum(), "ä"));	//Test von Langem Text
 	}
 	
 	/**
 	 * @param ammount
 	 * @return ammount of blanks as String
 	 */
-	public static String getSpaces(int ammount) {
+	public static String getSpaces(int ammount) {	//Methode zum generieren von ammount Leerzeichen
 		String spaces="";
 		for(int i=0;i<=ammount;i++) {
 			spaces=spaces+" ";
