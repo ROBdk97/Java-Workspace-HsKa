@@ -9,12 +9,8 @@ public class TernaryMedian {
 	 * @return Median (mittlere Zahl) von a, b, c 
 	 * */
 	static int median(int a, int b, int c)	{
-		int returner;
-		returner=(a>b)?a:b;
-		returner=(b>c)?b:c;
-		returner=(a>c)?a:c;
-		
-		return  returner; // TODO: Median mit ?:-Ausdrücken berechnen
+		int median = a < b ? b < c ? b : a < c ? c : a : b < c ? a < c ? a : c : b;
+		return  median; // TODO: Median mit ?:-Ausdrücken berechnen
 	}
 
 	/** Median durch Sortieren ermitteln 

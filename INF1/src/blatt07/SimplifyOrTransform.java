@@ -15,38 +15,38 @@ public class SimplifyOrTransform {
 		a = (b = 1 + (c = 0));
 		// Vereinfacht:
 		//TODO (Bitte durch Sie zu entwickeln)
-		a=b=1+(c=0);
+		a=b=1;c=0;
 		
 		
 		a = b++ - (b += 2) - (b = 0);
 		// Vereinfacht:
 		//TODO (Bitte durch Sie zu entwickeln)
-		
+		a=0;b=3;
 		
 		// Ändern Sie bitte ab auf, wo passend, Dekrement/Inkement-Opratoren 
 		// oder kombinierte Zuweisungsoperatoren (jeweils ohne die Ausgabe zu ändern ...)
 		final int N0 = 0, N1 = 17;
-		for(int i = N0; i < N1; i = i + 1) {
+		for(int i = N0; i < N1; i++) {
 			System.out.print(i + ", ");
 		}
 
 		System.out.println();
-		for(int i = N1 - 1; i >= N0; i = i - 1) {
+		for(int i = N1 - 1; i >= N0; i--) {
 			System.out.print(i + ", ");
 		}
 
 		System.out.println();
-		for(int i = N0; i < N1; i = i + 2) {
+		for(int i = N0; i < N1; i +=2) {
 			System.out.print(i + ", ");
 		}
 
 		System.out.println();
-		for(int i = N1 - 1; i >= N0; i = i - 2) {
+		for(int i = N1 - 1; i >= N0; i -= 2) {
 			System.out.print(i + ", ");
 		}
 
 		System.out.println();
-		for(int i = N0 + 1; i < N1 * N1; i = i + i) {
+		for(int i = N0 + 1; i < N1 * N1; i *= i) {
 			System.out.print(i + ", ");
 		}
 		System.out.println();
@@ -64,7 +64,7 @@ public class SimplifyOrTransform {
 			System.out.println();
 		}
 		System.out.println();
-		for(a=3;a < 100;a=a+2)
+		for(a=3;a < 100;a+=2)
 		{
 			for(b=2;b*b < a && a % b != 0;b++) {
 			}
