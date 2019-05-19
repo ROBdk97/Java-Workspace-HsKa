@@ -42,6 +42,7 @@ class HolidayFeatures {
 			}
 			theBit <<= 1;
 		}
+		ret = ret.substring(0, ret.length()-2)+".";
 		return ret;
 	}
 
@@ -62,7 +63,8 @@ class HolidayFeatures {
 	 * @return Anzahl übereinstimmender Features
 	 */
 	public int match(HolidayFeatures toMatch) {
-		return 0; // TODO
+		return Long.bitCount( toMatch.featureBits ^ featureBits);
+			
 	}
 
 	/** Main zum Testen ... */
