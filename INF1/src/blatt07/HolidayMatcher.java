@@ -1,5 +1,7 @@
 package blatt07;
 
+import java.text.NumberFormat;
+
 import blatt07.HolidayFeatures.Features;
 import nuetzlich.*;
 
@@ -63,7 +65,7 @@ class HolidayFeatures {
 	 * @return Anzahl übereinstimmender Features
 	 */
 	public int match(HolidayFeatures toMatch) {
-		return Long.bitCount( toMatch.featureBits ^ featureBits);
+		return (int)Long.bitCount((toMatch.featureBits ^ featureBits));
 			
 	}
 
