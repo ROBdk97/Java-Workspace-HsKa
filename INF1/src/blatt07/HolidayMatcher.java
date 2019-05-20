@@ -65,7 +65,7 @@ class HolidayFeatures {
 	 * @return Anzahl übereinstimmender Features
 	 */
 	public int match(HolidayFeatures toMatch) {
-		return (int)Long.bitCount((toMatch.featureBits ^ featureBits));
+		return (int)Long.bitCount((toMatch.featureBits & featureBits));
 			
 	}
 

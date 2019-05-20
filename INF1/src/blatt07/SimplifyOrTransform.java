@@ -21,7 +21,7 @@ public class SimplifyOrTransform {
 		a = b++ - (b += 2) - (b = 0);
 		// Vereinfacht:
 		//TODO (Bitte durch Sie zu entwickeln)
-		a=0;b=3;
+		a=-3;b=0;
 		
 		// Ändern Sie bitte ab auf, wo passend, Dekrement/Inkement-Opratoren 
 		// oder kombinierte Zuweisungsoperatoren (jeweils ohne die Ausgabe zu ändern ...)
@@ -46,7 +46,7 @@ public class SimplifyOrTransform {
 		}
 
 		System.out.println();
-		for(int i = N0 + 1; i < N1 * N1; i *= i) {
+		for(int i = N0 + 1; i < N1 * N1; i += i) {
 			System.out.print(i + ", ");
 		}
 		System.out.println();
