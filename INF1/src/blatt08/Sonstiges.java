@@ -9,54 +9,66 @@ public class Sonstiges {
 		int colorReturn;
 		switch (farbe) {
 		case KARO:
-			colorReturn=9;
+			colorReturn = 9;
 			break;
 		case HERZ:
-			colorReturn=10;
+			colorReturn = 10;
 			break;
 		case PIK:
-			colorReturn=11;
+			colorReturn = 11;
 			break;
 		default:
-			colorReturn=12;
-			break;		
+			colorReturn = 12;
+			break;
 		}
 		return colorReturn;
 	}
-	//TODO: Methoden die sich selbst aufrufen!!!!!!!!!!
-	 public static void prt1234(long n){
-		 if(n<=0)return;
-		 for (long i = 1; i <= n; i++) {
-			System.out.print(i+", ");
+
+	// TODO: Methoden die sich selbst aufrufen!!!!!!!!!!
+	public static void prt1234(long n) {
+		if (n <= 0) {
+			System.out.println();
+			return;
 		}
-		 System.out.println();
-	 }
-	 
-	 public static void prtSqr1234 (long n) {
-		 if(n<=0)return;
-		 for (int i = 1; i*i <= n*n; i++) {
-			 System.out.print(i*i+", ");
-		}
-		 System.out.println();
+		prt1234(n - 1);
+		System.out.print(n + ", ");
 	}
-	 
-	 public static void prt2468(long n) {
-		 if(n<=1)return;
-		 long m=n;
-		 if(n%2==0) {
-			 m--;
-		 }		 
-		 for (int i = 2;  i <= m; i+=2) {
-			 System.out.print(i+", ");
+
+	public static void prtSqr1234(long n) {
+		if (n <= 0) {
+			System.out.println();
+			return;
 		}
-		 System.out.println();
-		 
-	 }
-	
+		prtSqr1234(n - 1);
+		System.out.print(n * n + ", ");
+	}
+
+	public static void prt2468(long n) {
+		if (n <= 1)
+			return;
+		if (n % 2 != 0) {
+			n--;
+		}
+		prt2468(n - 2);
+		System.out.print(n + ", ");
+	}
+
+	static void xxx(long n) {
+		while(n>0) {
+			System.out.print(n+", ");
+			n--;
+		}
+		System.out.println();
+	}
+
 	public static void main(String[] args) {
 		System.out.println(farbenWert(KartenFarbe.KARO));
 		prt1234(Long.parseLong(args[0]));
+		System.out.println();
 		prtSqr1234(13);
+		System.out.println();
 		prt2468(13);
+		System.out.println();
+		xxx(13);
 	}
 }
