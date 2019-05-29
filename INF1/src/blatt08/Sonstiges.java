@@ -24,7 +24,6 @@ public class Sonstiges {
 		return colorReturn;
 	}
 
-	// TODO: Methoden die sich selbst aufrufen!!!!!!!!!!
 	public static void prt1234(long n) {
 		if (n <= 0) {
 			System.out.println();
