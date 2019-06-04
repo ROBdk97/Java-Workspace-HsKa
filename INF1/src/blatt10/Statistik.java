@@ -50,8 +50,6 @@ public class Statistik{
 	 */
 	@Override
 	public String toString() {
-		Entscheider e = new Entscheider("KinoGehen");
-		//return String.format("%s: %s\n", e.getName(), e.letzteEntscheidung );
 		return String.format("%12s: n==%10.0f, µ==%8f", 
 				this.name, this.n, this.getDurchschnitt() );
 	}

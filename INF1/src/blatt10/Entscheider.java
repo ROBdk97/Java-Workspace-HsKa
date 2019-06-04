@@ -5,8 +5,8 @@ package blatt10;
  */
 public class Entscheider {
 	private Statistik stat; // Statistik für _diesen_ Würfel
-	String name;
-	static EntscheidungsWerte letzteEntscheidung;
+	private String name;
+	private static EntscheidungsWerte letzteEntscheidung;
 
 	private enum EntscheidungsWerte {
 		Nein, Ja
@@ -28,7 +28,7 @@ public class Entscheider {
 	 * 
 	 * @return Anzahl Augen in 1 ... 6
 	 */
-	int wuerfeln() {
+	private int wuerfeln() {
 		int ret = (int) (1 + Math.random() * 6.0);
 		this.stat.addWert(ret);
 		return ret;
