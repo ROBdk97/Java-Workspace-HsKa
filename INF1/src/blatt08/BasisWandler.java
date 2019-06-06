@@ -48,10 +48,8 @@ public class BasisWandler {
 		if (n <= 0L) {
 			return "";
 		} else {
-			long further = n % k;
-			return inBasisKwandeln(n / k, k) + intNachZiffer((int) further);
+			return inBasisKwandeln(n / k, k) + intNachZiffer((int)n % k);
 		}
-		// return "AFFE"; // TODO Rekursive Lösung für Basiswandel
 	}
 
 	public static void main(String[] args) {

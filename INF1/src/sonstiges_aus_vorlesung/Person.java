@@ -2,8 +2,8 @@ package sonstiges_aus_vorlesung;
 
 public class Person {
 
-	private String vorname;
-	private String nachname;
+	protected String vorname;
+	protected String nachname;
 	
 	/**
 	 * 
