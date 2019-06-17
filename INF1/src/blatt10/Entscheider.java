@@ -6,8 +6,13 @@ package blatt10;
 public class Entscheider {
 	private Statistik stat; // Statistik für _diesen_ Würfel
 	private String name;
-	private static EntscheidungsWerte letzteEntscheidung;
+	private EntscheidungsWerte letzteEntscheidung;
 
+	/**
+	 * 
+	 * Entscheidungswerte Ja/Nein
+	 *
+	 */
 	private enum EntscheidungsWerte {
 		Nein, Ja
 	}
@@ -15,10 +20,10 @@ public class Entscheider {
 	/**
 	 * Konstruktor
 	 * 
-	 * @param name des Würfels
-	 * 
+	 * @param name des Würfels Setzt den Namen des Würfels und erstellt eine
+	 *             zugehörge Statistik
 	 */
-	Entscheider(String name) {
+	public Entscheider(String name) {
 		this.name = name;
 		this.stat = new Statistik(this.name);
 	}
@@ -34,7 +39,12 @@ public class Entscheider {
 		return ret;
 	}
 
-	public EntscheidungsWerte setValue(int value) {
+	/**
+	 * 
+	 * @param value der wert der umgewandelt werden soll in einen Entscheidungswert
+	 * @return der Wert als Entscheidungswert
+	 */
+	private EntscheidungsWerte setValue(int value) {
 		switch (value) {
 		case 0:
 			return EntscheidungsWerte.Nein;
@@ -42,14 +52,19 @@ public class Entscheider {
 			return EntscheidungsWerte.Ja;
 		default:
 			System.out.println("Error");
-			return null;			
+			return null;
 		}
 	}
 
+	/**
+	 * Ein zufallsgenerator der eine Zahl generiert und in die statistik einträgt
+	 * 
+	 * @return der Generierte Wert
+	 */
 	private int entscheiden() {
-		int ret = (int)(Math.random()*10%2);
+		int ret = (int) (Math.random() * 10 % 2);
 		this.stat.addWert(ret);
-		letzteEntscheidung=setValue(ret);
+		letzteEntscheidung = setValue(ret);
 		return ret;
 	}
 
@@ -57,18 +72,25 @@ public class Entscheider {
 		Entscheider e = new Entscheider("KinoGehen");
 		System.out.printf("Ausgabe der Statistik für viele Entscheidungen:\n");
 		for (long l = 0L; l < 10_000_000L; l++) {
-		 e.entscheiden();
+			e.entscheiden();
 		}
-		System.out.printf("%s: %s\n", e.getName(), e.letzteEntscheidung );
+		System.out.printf("%s: %s\n", e.getName(), e.letzteEntscheidung);
 	}
 
+	/**
+	 * @return den Namen der Entscheidung die getroffen werden soll
+	 */
 	public String getName() {
 		return this.name;
 	}
 
+	/**
+	 * Überschreibt die toString Methode und gibt die eintscheidung zurück und den
+	 * Wert
+	 */
 	@Override
 	public String toString() {
 		Entscheider e = new Entscheider("KinoGehen");
-		 return String.format("%s: %s\n", e.getName(), e ); 
-		}
+		return String.format("%s: %s\n", e.getName(), e);
+	}
 }

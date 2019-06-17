@@ -72,7 +72,9 @@ public class SudokuSolver {
 
 			nrOfSolutions = 0;
 			nrOfTests = 0;
-			this.loesen(0, 0);
+			this.solve();
+			System.out.println("Lösung");
+			this.print();
 		}
 	}
 
