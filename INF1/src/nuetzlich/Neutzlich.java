@@ -72,4 +72,12 @@ public class Neutzlich {
 		long mask = 1 << feature;
 		return (featureBits & ~mask) | ((b << feature) & mask);
 	}
+	
+	public static String getSpaces(int ammount) {	//Methode zum generieren von ammount Leerzeichen
+		String spaces="";
+		for(int i=0;i<=ammount;i++) {
+			spaces=spaces+" ";
+		}
+		return spaces;
+	}
 }

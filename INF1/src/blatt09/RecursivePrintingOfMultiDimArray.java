@@ -1,7 +1,10 @@
 		
 	package blatt09;
-	
-	public class RecursivePrintingOfMultiDimArray {
+
+import java.io.ObjectInputStream.GetField;
+import nuetzlich.*;
+
+public class RecursivePrintingOfMultiDimArray {
 		static String[][][] eBau = {
 				{ // UG
 					{ // Süd
@@ -50,7 +53,10 @@
 		 *            Rekursionstiefe.
 		 */
 		static void printInXml(Object[] objs, String indent) {
-			// TODO
+			int i=0;
+			for (Object obj: objs) {
+				System.out.println(Neutzlich.getSpaces(i++)+obj);
+			}
 		}
 
 	public static void main(String[] args) {
