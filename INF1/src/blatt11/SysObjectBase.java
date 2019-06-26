@@ -1,10 +1,10 @@
 package blatt11;
 
-public class SysObjectBase {
+public abstract class SysObjectBase {
 	protected String name;
 	protected String user;
 
-	public SysObjectBase(String name) {
+	protected SysObjectBase(String name) {
 		this.name = name;
 		this.user = System.getenv("USERNAME");
 	}
