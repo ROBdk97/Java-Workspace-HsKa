@@ -27,7 +27,7 @@ public abstract class SysObjectBase {
 
 	@Override
 	public String toString() {
-		return "Class=" + this.getClass() + ", Name=" + this.name + ", User=" + this.user;
+		return "Class=" + this.getClass().getSimpleName() + ", Name=" + this.name + ", User=" + this.user;
 	}
 
 }

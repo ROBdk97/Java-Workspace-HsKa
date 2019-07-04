@@ -8,7 +8,7 @@ public class SysTextFile extends SysObjectBase {
 	}
 
 	private String type;
-	private String text = "";
+	private String text="";
 
 	public static void main(String[] args) {
 		SysTextFile stf = new SysTextFile("Hello", "java");
@@ -18,8 +18,7 @@ public class SysTextFile extends SysObjectBase {
 
 	@Override
 	public String toString() {
-		return "Class=" + this.getClass().getSimpleName() + ", Name=" + this.name + "," + " User=" + this.user
-				+ ", Type=" + this.type + ", Length=" + this.text.length();
+		return super.toString() + ", Type=" + this.type + ", Length=" + this.text.length();
 	}
 
 	public String getType() {

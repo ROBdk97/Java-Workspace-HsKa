@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SysDirectory extends SysObjectBase {
-	
+
 	/**
 	 * Liste an SysObjectBase elementen
 	 */
@@ -42,8 +42,7 @@ public class SysDirectory extends SysObjectBase {
 
 	@Override
 	public String toString() {
-		return "Class=" + this.getClass().getSimpleName() + ", Name=" + this.name + ", User=" + this.user + ","
-				+ " NumberOfObjects=" + this.sysObjects.length;
+		return super.toString() + "," + " NumberOfObjects=" + this.sysObjects.length;
 	}
 
 	public static void main(String[] args) {
